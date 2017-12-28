@@ -1,0 +1,46 @@
+html, body {
+  font-size: 10px;
+}
+
+div.navbar {
+  /* background-color: red; */
+  font-size: 160%;
+  color: white;
+  height: 3em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  /* font-size: 150%; */
+  /* max-width: 1024px; */
+  /* margin: 0 auto; */
+  /* font-weight: bolder; */
+}
+
+div.navbar div.navbar-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+div.navbar.fix {
+  background-color: green;
+}
+
+div.long-content {
+  height: 200em;
+  padding-top: 2em;
+}
+
+ul.navbar-list {
+  float: right;
+  /* display: inline-block; */
+  list-style: none;
+  margin-right: 2em;
+}
+
+ul.navbar-list li {
+  display: inline-block;
+  padding-top: 1em;
+  margin: 0 0.5em;
+}

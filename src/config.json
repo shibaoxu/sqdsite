@@ -1,0 +1,17 @@
+{
+  "navbar": {
+    "logoImage": "/static/images/logo.png",
+    "menus": [
+      { "name": "home","path": "/", "title": "首页" },
+      { "name": "products","path": "/products", "title": "产品" },
+      { "name": "solutions","path": "/solutions", "title": "解决方案" },
+      { "name": "about","path": "/about", "title": "关于我们" }
+    ]
+  },
+  "home": {
+    "pcBanners": [
+      { "name": "b1", "backgroundImage": "/static/images/home/pcbanner-01.jpg" },
+      { "name": "b2", "backgroundImage": "/static/images/home/pcbanner-02.jpg" }
+    ]
+  }
+}

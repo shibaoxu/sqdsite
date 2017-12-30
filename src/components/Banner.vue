@@ -1,7 +1,7 @@
 <template>
-  <Carousel v-model="index">
+  <Carousel v-model="index" class="pc-banner">
     <CarouselItem>
-      <div>
+      <div class="banner-item">
         <img src="/static/images/banner_express_feature.jpg" >
       </div>
     </CarouselItem>
@@ -11,6 +11,7 @@
 <script>
 export default {
   name: 'banner',
+  props: ['bannerItems'],
   data () {
     return {
       index: 0

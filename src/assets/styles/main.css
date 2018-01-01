@@ -1,98 +1,223 @@
-html, body {
-  font-size: 10px;
+@import url(./variables.css);
+html,
+body {
+    font-size: 10px;
 }
 
 div.navbar {
-  font-size: 160%;
-  color: white;
-  height: 5em;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-
-  & div.navbar-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    & div.logo {
-      width: 15%;
-      float: left;
-      
-      margin-left: 2em;
-      margin-top: 2em;
-      & img {
-        max-width: 110px;
-        min-width: 70px;
-        width: 100%;
-        height: auto;
-      }
-    }
-    & ul.navbar-list {
-      display: none;
-      float: right;
-      list-style: none;
-      margin-right: 2em;
-
-      & li {
-        margin-top: 2.5em;
-        margin-left: 2em;
-        display: inline-block;
-        & a {
-          color: white;
+    font-size: 160%;
+    color: white;
+    height: 5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    & div.navbar-container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        & div.logo {
+            width: 15%;
+            float: left;
+            margin-left: 2em;
+            margin-top: 2em;
+            & img {
+                max-width: 110px;
+                min-width: 70px;
+                width: 100%;
+                height: auto;
+            }
         }
-      }
+        & ul.navbar-list {
+            display: none;
+            float: right;
+            list-style: none;
+            margin-right: 2em;
+            & div.dropdown-content {
+                /* padding: 1em; */
+                display: none;
+                position: absolute;
+                z-index: 100;
+                min-width: 40em;
+                right: 0;
+                & div.dropdown-arrow {
+                    width: 0;
+                    height: 0;
+                    float: right;
+                    margin-right: 0.5em;
+                    border-left: 0.8em solid transparent;
+                    border-right: 0.8em solid transparent;
+                    border-bottom: 0.8em solid var(--color-grey);
+                }
+                & div.dropdown-menu {
+                    background-color: var(--color-grey);
+                    border-radius: 0.5em;
+                    clear: both;
+                    & .card2 {
+                        border-radius: 0.5em;
+                        font-size: 0.8em;
+                        /* margin: 1em 0; */
+                    }
+                }
+            }
+            & li.dropdown {
+                position: relative;
+            }
+            & li.dropdown:hover div.dropdown-content {
+                display: block;
+                /* top: 3em; */
+            }
+            & li {
+                margin-top: 2.5em;
+                margin-left: 2em;
+                display: inline-block;
+                & a {
+                    color: white;
+                }
+            }
+        }
+        & div.dropdown {
+            float: right;
+            margin-top: 2em;
+            margin-right: 2em;
+            & a {
+                color: white;
+            }
+        }
     }
-    & div.dropdown {
-      float: right;
-      margin-top: 2em;
-      margin-right: 2em;
-      & a {
-        color: white;
-      }
-    }
-  }
 }
+
 div.navbar.fix {
-  background-color: rgb(67,61,97);
+    background-color: rgb(67, 61, 97);
 }
 
 div.pc-banner {
-  display: none;
-  & div.banner-item{
-    width: 100%;
-    height: 58em;
-    background-size: cover;
-  }
+    display: none;
+    & div.banner-item {
+        width: 100%;
+        height: 58em;
+        /* padding-top: 10em; */
+        /* height: auto; */
+        /* text-align: center; */
+        background-size: cover;
+        & div.banner-content {
+            color: yellow;
+            max-width: 50em;
+            font-size: 2em;
+            padding-top: 10em;
+            /* color: white; */
+            width: 80%;
+            /* height: auto; */
+            margin: 0 auto;
+            & h1 {
+                font-size: 2em;
+                font-weight: bold;
+                margin-bottom: 1em;
+            }
+            & h2 {
+                font-size: 1.5em;
+                font-weight: lighter;
+                padding-bottom: 0.3em;
+            }
+            & ul {
+                list-style: circle;
+                padding-left: 1em;
+                font-weight: lighter;
+            }
+        }
+    }
 }
 
 div.mobile-banner {
-  clear: both;
-  & img {
-    width: 100%;
-    height: auto;
-  }
+    background-size: cover;
+    height: 25em;
+    clear: both;
+    & .mobile-banner-content {
+        text-align: center;
+        color: white;
+        padding-top: 8em;
+        padding-left: 1em;
+        & h1 {
+            margin-bottom: 1em;
+        }
+        & h2 {
+            margin-bottom: 0.5em;
+        }
+    }
 }
 
-@media screen and (min-width: 700px) {
-  div.navbar div.navbar-container {
-    &  ul.navbar-list {
-      display: block;
+@media screen and (min-width: 767px) {
+    div.navbar div.navbar-container {
+        & ul.navbar-list {
+            display: block;
+        }
+        & div.dropdown {
+            display: none;
+        }
     }
-    & div.dropdown {
-      display: none;
+    div.pc-banner {
+        display: block;
     }
-  }
-  div.pc-banner {
-    display: block;
-  }
-  div.mobile-banner {
-    display: none;
-  }
+    div.mobile-banner {
+        display: none;
+    }
 }
 
+div.band {
+    margin: 0;
+}
+
+div.band.grey {
+    background-color: var(--color-grey);
+}
+
+div.card-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* padding-left: 2em; */
+    /* padding-right: 2em; */
+    flex-wrap: wrap;
+}
+
+div.card1 {
+    flex: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    border: 1px solid rgb(234, 234, 234);
+    margin: 1em 2em;
+    & .card1-icon {
+        font-size: 5em;
+    }
+    & .card1-title {
+        font-size: 2.5em;
+    }
+    & div.card1-detail {
+        color: rgb(102, 102, 102);
+        padding-top: 1em;
+        font-size: 1.5em;
+    }
+}
+
+div.card2 {
+    color: black;
+    display: flex;
+    min-width: 20em;
+    cursor: pointer;
+    padding: 1em;
+    & .details {
+        font-weight: lighter;
+    }
+}
+
+div.card2:hover {
+    background-color: rgb(242, 242, 242);
+}
 
 div.long-content {
-  height: 200em;
-  padding-top: 2em;
+    height: 200em;
+    padding-top: 2em;
 }

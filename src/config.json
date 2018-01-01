@@ -1,17 +1,44 @@
 {
-  "navbar": {
-    "logoImage": "/static/images/logo.png",
-    "menus": [
-      { "name": "home","path": "/", "title": "首页" },
-      { "name": "products","path": "/products", "title": "产品" },
-      { "name": "solutions","path": "/solutions", "title": "解决方案" },
-      { "name": "about","path": "/about", "title": "关于我们" }
-    ]
-  },
-  "home": {
-    "pcBanners": [
-      { "name": "b1", "backgroundImage": "/static/images/home/pcbanner-01.jpg" },
-      { "name": "b2", "backgroundImage": "/static/images/home/pcbanner-02.jpg" }
-    ]
-  }
+    "navbar": {
+        "logoImage": "/static/images/logo.png",
+        "menus": [
+            { "name": "home", "path": "/", "title": "首页" },
+            { "name": "products", "path": "/products", "title": "产品" },
+            { "name": "solutions", "path": "/solutions", "title": "解决方案" },
+            { "name": "about", "path": "/about", "title": "关于我们" }
+        ]
+    },
+    "home": {
+        "productCards": [{
+                "name": "x",
+                "icon": "monitor",
+                "title": "SQD X",
+                "desc": "SQD X帮助用户构建基于OpenStack标准的企业级私有云平台， 能够提供IaaS层和PaaS层资源， 同时具备资源编排、多级权限、全面监控、计费报表等增强特性。"
+            },
+            {
+                "name": "fusion",
+                "icon": "social-buffer-outline",
+                "title": "SQD Fusion",
+                "desc": "SQD Fusion 使用“软件定义”的技术，在通用 x86 服务器上构建高效、灵活且易扩展的 IT 数据中心；SQX Fusion 产品成熟度高，易用性达到“企业级”产品水准，极大减轻运维负担。"
+            },
+            {
+                "name": "one",
+                "icon": "social-windows-outline",
+                "title": "SQD One",
+                "desc": "SQD One 帮助用户构建基于Kubernets技术的企业级容器云平台，可以轻松弹性扩展应用，有效处理不断增加的业务需求，并降低企业多租户 PaaS 门槛。"
+            },
+            {
+                "name": "devops",
+                "icon": "social-vimeo-outline",
+                "title": "SQD devops",
+                "desc": "SQD devops 帮助用户打造全流程无差异的应用交付体验，让应用的持续交付更顺畅，帮助应用更快推向市场,支撑微服务架构，并提供负载均衡，服务注册，日志收集等微服务最佳实践。"
+            },
+            {
+                "name": "c",
+                "icon": "pinpoint",
+                "title": "SQD C",
+                "desc": "SQD C 为用户提供云计算相关咨询与服务，在紧密结合用户IT现状，业务特点，以及企业未来发展战略条件下，帮助用户梳理、分析云计算给业务发展带来的促进作用和价值，进而帮助企业进行未来云计算服务蓝图规划和云计算蓝图实施演进路线设计等。"
+            }
+        ]
+    }
 }

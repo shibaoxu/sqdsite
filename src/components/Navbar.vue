@@ -14,14 +14,39 @@
       </Dropdown>
 
       <ul class="navbar-list">
-        <li v-for="item in menus" :key="item.name"><a :href="item.path"> {{ item.title }}</a></li>
+        <li><a href="/">首页</a></li>        
+        <li class="dropdown">
+          <span>产品</span>
+          <div class="dropdown-content">
+            <div class="dropdown-arrow"></div>
+            <div class="dropdown-menu">
+              <Card2 icon="/static/images/logos/x1.png" title="SQD X" subtitle="私有云平台" details="SQD X帮助用户构建基于OpenStack标准的企业级私有云平台， 能够提供IaaS层和PaaS层资源， 同时具备资源编排、多级权限、全面监控、计费报表等增强特性。" />
+              <Card2 icon="/static/images/logos/fusion.png" title="SQD X" subtitle="私有云平台" details="SQD X帮助用户构建基于OpenStack标准的企业级私有云平台， 能够提供IaaS层和PaaS层资源， 同时具备资源编排、多级权限、全面监控、计费报表等增强特性。" />
+              <Card2 icon="/static/images/logos/one.png" title="SQD X" subtitle="私有云平台" details="SQD X帮助用户构建基于OpenStack标准的企业级私有云平台， 能够提供IaaS层和PaaS层资源， 同时具备资源编排、多级权限、全面监控、计费报表等增强特性。" />
+            </div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <span>解决方案</span>
+          <div class="dropdown-content">
+            <div class="dropdown-arrow"></div>
+            <div class="dropdown-menu">
+              <Card2 icon="/static/images/logos/x1.png" title="SQD X" subtitle="私有云平台" details="SQD X帮助用户构建基于OpenStack标准的企业级私有云平台， 能够提供IaaS层和PaaS层资源， 同时具备资源编排、多级权限、全面监控、计费报表等增强特性。" />
+              <Card2 icon="/static/images/logos/fusion.png" title="SQD X" subtitle="私有云平台" details="SQD X帮助用户构建基于OpenStack标准的企业级私有云平台， 能够提供IaaS层和PaaS层资源， 同时具备资源编排、多级权限、全面监控、计费报表等增强特性。" />
+              <Card2 icon="/static/images/logos/one.png" title="SQD X" subtitle="私有云平台" details="SQD X帮助用户构建基于OpenStack标准的企业级私有云平台， 能够提供IaaS层和PaaS层资源， 同时具备资源编排、多级权限、全面监控、计费报表等增强特性。" />
+            </div>
+          </div>
+        </li>
+        <li><a href="/about">关于</a></li>
+        
       </ul>
-
+      
     </div>
   </div>
 </template>
 
 <script>
+import Card2 from '@/components/Card2'
 export default {
   name: 'navbar',
   props: ['logo', 'menus'],
@@ -40,6 +65,9 @@ export default {
   },
   beforeDestroy () {
     window.removeEventListener('scroll', null)
+  },
+  components: {
+    Card2
   }
 }
 </script>

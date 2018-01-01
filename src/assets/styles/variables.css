@@ -1,0 +1,29 @@
+:root {
+    --color-logo: #a87112;
+    --color-logo-h: #f2a900;
+    --color-black: #1c2438;
+    --color-grey: rgb(245, 245, 246);
+    --color-select-grey: rgba(255, 255, 255, 0.2);
+    --banner-title-fontsize: 44px;
+    --banner-title-fontweight: 400;
+    --banner-subtitle-fontsize: 20px;
+    --banner-subtitle-fontweight: 400;
+    --banner-content-fontsize: 16px;
+    --toolbar-title-fontsize: 16px;
+    --toolbar-title-fontweight: 700;
+    --toolbar-subtitle-fontsize: 14px;
+    --toolbar-subtitle-fontweight: 400;
+    --toolbar-icon-size: 32px;
+    --band-title-fontsize: 24px;
+    --band-title-fontweight: 500;
+    --band-subtitle-fontsize: 16px;
+    --band-subtitle-fontweight: 400;
+    --band-grey-bgcolor: var(--color-grey);
+    --smcard-icon-size: 80px;
+    --smcard-title-fontsize: 14px;
+    --smcard-title-fontweight: 400px;
+    --sm-space: 8px;
+    --md-space: 16px;
+    --lg-space: 24px;
+    --max-width: 1400px;
+}

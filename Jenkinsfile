@@ -6,10 +6,15 @@ pipeline {
         }
     }
     stages {
+        state('Init Env') {
+          steps {
+            sh 'npm config set registry http://registry.npm.taobao.org/'
+            sh 'npm install' 
+          }
+        }
         stage('Build') { 
             steps {
-                sh 'npm config set registry http://registry.npm.taobao.org/'
-                sh 'npm install' 
+              sh 'npm run build'
             }
         }
     }

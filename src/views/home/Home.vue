@@ -41,17 +41,15 @@
       <p><small>我们会在24小时之内联系您</small></p>
     </div>
   </div>
-  <div class="band">
+  <div class="band grey">
     <div class="card-container">
       <Card1 :content="card" v-for="card in productCards" :key="card.name" />
     </div>
   </div>
   <div class="band">
-    <div class="cases">
-
-    </div>
+    <div class="band-title">这些客户选择了全端网络</div>
+    <Cases />
   </div>
-  <div class="long-content">I am long content</div>
   </div>
 </template>
 
@@ -59,6 +57,7 @@
 import config from '@/config.json'
 import Card1 from '@/components/Card1'
 import Card2 from '@/components/Card2'
+import Cases from '@/components/Cases'
 
 export default {
   name: 'home',
@@ -72,7 +71,8 @@ export default {
   },
   components: {
     Card1,
-    Card2
+    Card2,
+    Cases
   }
 
 }

@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'node:9.8.0-alpine' 
-            args '-u root' 
+            // args '-u root' 
         }
     }
     stages {

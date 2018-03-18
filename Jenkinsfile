@@ -15,8 +15,8 @@ pipeline {
         stage('Build') { 
             steps {
               sh 'npm run build'
-              zip zipFile: 'sqdsize.zip', dir: 'dist'
-              archiveArtifacts artifacts: 'sqdsize.zip'
+            //   zip zipFile: 'sqdsize.zip', dir: 'dist'
+            //   archiveArtifacts artifacts: 'sqdsize.zip'
             }
         }
     }

@@ -6,7 +6,7 @@ pipeline {
         }
     }
     stages {
-        stage('初始化编译环境') {
+        stage('初始化') {
           steps {
             sh 'npm config set registry http://registry.npm.taobao.org/'
             sh 'npm install' 
@@ -17,7 +17,7 @@ pipeline {
               sh 'npm run build'
             }
         }
-        stage('归档构建物') {
+        stage('归档') {
             steps {
               zip zipFile: 'sqdsize.zip', dir: 'dist'
               archiveArtifacts artifacts: 'sqdsize.zip'

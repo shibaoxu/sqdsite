@@ -19,9 +19,9 @@ pipeline {
         }
         stage('归档') {
             steps {
-              sh 'rm -f sqlsite.zip'
+              sh 'rm -f sqdsite.zip'
               zip zipFile: 'sqdsite.zip', dir: 'dist'
-              archiveArtifacts artifacts: 'sqdsize.zip'
+              archiveArtifacts artifacts: 'sqdsite.zip'
             }
         }
     }

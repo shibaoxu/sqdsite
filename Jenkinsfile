@@ -16,7 +16,7 @@ pipeline {
             steps {
               sh 'npm run build'
               zip zipFile: 'sqdsize.zip', dir: 'dist'
-            //   archiveArtifacts artifacts: 'sqdsize.zip'
+              archiveArtifacts artifacts: 'sqdsize.zip'
             }
         }
     }

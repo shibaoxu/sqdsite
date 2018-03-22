@@ -1,14 +1,6 @@
 ---
 - hosts: app
   tasks:
-    - import_role: 
-        name: nodejs
-      vars:
-        nodejs_version: '8.x'
-    - import_role: 
-        name: nginx
-      vars:
-        nginx_remove_default_vhost: true
     - import_role:
         name: node_app.nginx
       vars:

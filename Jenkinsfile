@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy') {
             agent any
             steps {
-                ansiblePlaybook credentialsId: 'fbb00855-59ca-4f8c-8cfb-aa2131d4c1a1', inventory: 'ansible/hosts', playbook: 'ansible/deploy.yml'
+                ansiblePlaybook inventory: 'ansible/hosts', playbook: 'ansible/deploy.yml'
             }
         }
     }

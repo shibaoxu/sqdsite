@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy') {
             agent any
             steps {
-                ansiblePlaybook inventory: 'ansible/hosts', playbook: 'ansible/deploy.yml', sudo: true
+                ansiblePlaybook credentialsId: '67aa5915-e383-4e88-bd80-d684b93d5050', inventory: 'ansible/hosts', playbook: 'ansible/deploy.yml', sudo: true
             }
         }
     }

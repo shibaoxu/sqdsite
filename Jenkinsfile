@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy') {
             agent any
             steps {
-                ansiblePlaybook inventory: 'ansible/hosts', playbook: 'ansible/deploy.yml'
+                ansiblePlaybook inventory: 'ansible/hosts', playbook: 'ansible/deploy.yml', sudo: true
             }
         }
     }

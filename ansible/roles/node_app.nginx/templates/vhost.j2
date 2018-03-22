@@ -1,0 +1,11 @@
+server {
+    listen       {{ listen_port | default('80') }};
+    server_name  {{ server_name | default('') }};
+
+    location / {
+      root {{ app_root }};
+      index index.html;
+      try_files $uri $uri/ /index.html =404;
+    }    
+}
+

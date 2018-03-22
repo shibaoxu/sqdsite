@@ -1,0 +1,22 @@
+---
+- name: 删除已有应用目录 
+  file: 
+    path: "{{ app_root }}" 
+    state: absent
+- name: 创建新目录
+  file: 
+    path: "{{ app_root }}" 
+    state: directory
+    owner: "{{nginx_user}}"
+- name: 拷贝应用文件
+  copy:
+    src: "{{ local_app_path }}"
+    dest: "{{ app_root }}"
+    owner: "{{ nginx_user }}"
+- name: 部署vhost文件
+  block:
+    - file: path="/etc/nginx/sites-available/{{ appname }}.conf" state=absent
+    - file: path="/etc/nginx/sites-enabled/{{ appname }}.conf" state=absent
+    - template: src=vhost.j2 dest="/etc/nginx/sites-available/{{ appname }}.conf"
+    - file: src="/etc/nginx/sites-available/{{ appname }}.conf" dest="/etc/nginx/sites-enabled/{{ appname }}.conf" state=link
+      notify: restart nginx

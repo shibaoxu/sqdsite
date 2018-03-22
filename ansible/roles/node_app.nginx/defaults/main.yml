@@ -1,0 +1,10 @@
+---
+appname: demo
+local_app_path: "{{ lookup('env', 'HOME')}}/{{appname}}/"
+
+nginx_config_path: /etc/nginx
+
+nginx_user: www-data
+listen_port: 80
+server_name: demo
+app_root: "/opt/app/{{ appname }}/"
